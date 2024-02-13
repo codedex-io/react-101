@@ -8,11 +8,9 @@ function Post() {
         <img id="profile-img" src={userImage} alt="Profile Image" />
         <p>Hipthehippocorn</p>
         {/* Follow Button Here */}
-        <FollowButton />
       </div>
       <img id="post-img" src={postImage} alt="Post Image" />
       {/* Like Button Here */}
-      <LikeButton />
     </div>
   );
 }
