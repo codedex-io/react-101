@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Avenir, Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #4a4a4a;
+  background-color: hsl(0, 0%, 90%);
+}
+
+body {
+  display: flex;
+  place-items: center;
+}
+
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+nav > ul > li {
+  display: inline;
+}
+
+nav > ul > li:first-child::after, nav > ul > li:nth-child(2)::after {
+  content: " | ";
+}
