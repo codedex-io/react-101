@@ -19,7 +19,8 @@ export function App() {
    <div className="App">
      <div
        className="element-with-tooltip"
-       /* add events here 💖 */
+       onMouseEnter={handleMouseEnter}
+       onMouseLeave={handleMouseLeave}
      >
        Hover over me
        {showTooltip && <div className="tooltip">This is a tooltip</div>}
