@@ -1,4 +1,4 @@
-// Test Run 🧪
+// Writing React ✍🏼
 // Codédex
 
 export default function App() {
