@@ -13,7 +13,7 @@ export default function HighScore() {
   function handleSubmit(e) {
     e.preventDefault();
     if (name.length > 3) {
-      setError("Name must be 3 characters or less.");
+      alert("Name must be 3 characters or less.");
     } else {
       setName("");
     }
@@ -34,7 +34,7 @@ export default function HighScore() {
         <br />
         <button type="submit" className="arcade-button">Submit</button>
       </form>
-      <h3>Top Score: {name} </h3>
+      <p>Top Score: <strong>{name}</strong> </p>
     </div>
   );
 }

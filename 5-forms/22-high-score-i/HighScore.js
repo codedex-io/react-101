@@ -12,7 +12,7 @@ export default function HighScore() {
 
   return (
     <div className="arcade-container">
-      <form className="arcade-form" onSubmit={handleSubmit}>
+      <form className="arcade-form">
         <label htmlFor="name">Enter your name<br/><br />(3 characters max)</label>
         <input
           type="text"
@@ -25,7 +25,7 @@ export default function HighScore() {
         <br />
         <button type="submit" className="arcade-button">Submit</button>
       </form>
-      <h3>Top Score: {name} </h3>
+      <p>Top Score: <strong>{name}</strong> </p>
     </div>
   );
 }
