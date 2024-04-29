@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, createContext } from 'react';
 import ThemeSwitcher from './ThemeSwitcher';
 import Content from './Home';
