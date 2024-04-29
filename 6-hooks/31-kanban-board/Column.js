@@ -1,3 +1,6 @@
+// Kanban Board 📋
+// Codédex
+
 import React from "react";
 import Task from "./Task";
 

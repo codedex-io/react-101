@@ -1,3 +1,6 @@
+// Cookie Clicker 🍪
+// Codédex
+
 import React from "react";
 import { useState } from "react";
 import Cookie from "./cookie.png";

@@ -1,3 +1,6 @@
+// Barbenheimer 👠
+// Codédex
+
 import React from "react";
 import { useState, createContext } from "react";
 import ThemeSwitcher from "./ThemeSwitcher";

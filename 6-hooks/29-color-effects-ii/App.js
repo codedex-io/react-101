@@ -1,6 +1,9 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import './styles.css';
+// Color Effects II 🌈
+// Codédex
+
+import React from "react";
+import { useState, useEffect } from "react";
+import "./styles.css";
 
 export default function ColorfulBackground() {
 
@@ -9,7 +12,7 @@ export default function ColorfulBackground() {
   useEffect(function() {
     const intervalId = setInterval(function() {
       if (toggle) {
-        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
         document.body.style.backgroundColor = randomColor;
       }
     }, 1000); 
@@ -27,7 +30,7 @@ export default function ColorfulBackground() {
 
   return (
     <div id="toggle">
-      <button onClick={handleToggle}>{toggle ? 'Stop' : 'Start'} Color Changing</button>
+      <button onClick={handleToggle}>{toggle ? "Stop" : "Start"} Color Changing</button>
     </div>
   );
 }

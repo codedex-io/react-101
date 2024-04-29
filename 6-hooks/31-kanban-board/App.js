@@ -1,3 +1,6 @@
+// Kanban Board 📋
+// Codédex
+
 import React from "react";
 import Column from "./Column";
 import { createContext, useContext, useState, useEffect } from "react";

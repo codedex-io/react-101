@@ -1,3 +1,6 @@
+// Color Effects I 🎨
+// Codédex
+
 import React from "react";
 import { useState, useEffect } from "react";
 import "./styles.css";

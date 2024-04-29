@@ -1,3 +1,6 @@
+// Kanban Board 📋
+// Codédex
+
 import React from "react";
 import { BoardContext } from "./App.jsx";
 import { useContext } from "react";

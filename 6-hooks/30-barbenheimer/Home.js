@@ -1,3 +1,6 @@
+// Barbenheimer 👠
+// Codédex
+
 import { useContext } from "react";
 import { ThemeContext } from "./App.js";
 import {  useEffect } from "react";
