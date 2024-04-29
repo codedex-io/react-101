@@ -20,7 +20,9 @@ export default function ColorfulBackground() {
   }, [toggle]);
 
   const handleToggle = function() {
-    setToggle(prevToggle => !prevToggle);
+    setToggle(function(prevToggle) {
+      return !prevToggle
+    } );
   };
 
   return (

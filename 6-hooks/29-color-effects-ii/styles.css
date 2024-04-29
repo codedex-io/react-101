@@ -1,5 +1,5 @@
-#button {
-    display: grid;
-    place-items: center;
-    height: 100vh; 
-  }
+#toggle {
+  display: grid;
+  place-items: center;
+  height: 100vh; 
+}

@@ -1,16 +1,16 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import './styles.css';
+import React from "react";
+import { useState, useEffect } from "react";
+import "./styles.css";
 
 export default function App() {
-  const [color, setColor] = useState('#ffffff'); 
+  const [color, setColor] = useState("#ffffff"); 
 
-  useEffect(() => {
+  useEffect(function() {
     document.body.style.backgroundColor = color;
   }, [color]);
 
-  const generateColor = function() {
-    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+  function generateColor() {
+    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
     setColor(randomColor);
   };
 

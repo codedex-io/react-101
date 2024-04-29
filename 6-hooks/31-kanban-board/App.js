@@ -1,15 +1,15 @@
-import React from 'react';
-import Column from './Column';
-import { createContext, useContext, useState, useEffect } from 'react';
-import './styles.css';
+import React from "react";
+import Column from "./Column";
+import { createContext, useContext, useState, useEffect } from "react";
+import "./styles.css";
 
 export const BoardContext = createContext();
 
 const TaskBoardProvider = function() {
   const [tasks, setTasks] = useState([
-    { id: 1, title: 'Task 1', status: 'todo' },
-    { id: 2, title: 'Task 2', status: 'todo' },
-    { id: 3, title: 'Task 3', status: 'todo' },
+    { id: 1, title: "Task 1", status: "todo" },
+    { id: 2, title: "Task 2", status: "todo" },
+    { id: 3, title: "Task 3", status: "todo" },
   ]);
 
   const moveTask = function(taskId, newStatus) {
@@ -23,7 +23,7 @@ const TaskBoardProvider = function() {
   };
 
   useEffect(function() {
-    const doneTasks = document.querySelectorAll('.task[data-status="done"]');
+    const doneTasks = document.querySelectorAll(".task[data-status='done']");
     doneTasks.forEach(function(taskElement) {
       taskElement.style.backgroundColor = "#dbf3c9";
     });
@@ -61,4 +61,3 @@ export default function App() {
     </div>
   );
 }
-
