@@ -1,0 +1,35 @@
+/* Barbenheimer 👠 */
+/* Codédex */
+
+/* Barbie theme */
+body.barbie {
+  background-color: #ff69b4;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+/* Oppenheimer theme */
+body.oppenheimer {
+  background-color: #101112; 
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+
+.theme-switcher button {
+  padding: 10px;
+  margin-top: 30px;
+  font-size: 16px;
+  background-color: white; 
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: center;
+}
