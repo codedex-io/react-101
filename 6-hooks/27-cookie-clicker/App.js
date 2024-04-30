@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div id="cookie">
       <p>{click} Cookies</p>
-      <img onClick={increment} src={Cookie} alt="Chocolate chip cookie" />
+      <img onClick={increment} src={"https://i.imgur.com/VMWZ9bM.png"} alt="Chocolate chip cookie" />
     </div>
   );
 }
