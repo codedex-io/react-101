@@ -3,7 +3,6 @@
 
 import React from "react";
 import { useState } from "react";
-import Cookie from "./cookie.png";
 
 export default function App() {
   const [click, setClick] = useState(0);
