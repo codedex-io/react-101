@@ -6,11 +6,11 @@ import { useState } from "react";
 export default function ShoppingItem(props) {
   const [quantity, setQuantity] = useState(0);
 
-  function handleIncrement() {
+  function handleIncrease() {
     setQuantity(function(prevQuantity) { return prevQuantity + 1});
   }
 
-  function handleDecrement() {
+  function handleDecrease() {
     if (quantity > 0) {
       setQuantity(function(prevQuantity) { return prevQuantity - 1});
     }
@@ -21,11 +21,11 @@ export default function ShoppingItem(props) {
       <p className="item-info">
         <strong>{props.name}</strong>
         <div className="buttons">
-          <button className="btn-decrement" onClick={handleDecrement}>
+          <button className="btn-decrement" onClick={handleDecrease}>
             -
           </button>
           <span className="quantity">{quantity}</span>
-          <button className="btn-increment" onClick={handleIncrement}>
+          <button className="btn-increment" onClick={handleIncrease}>
             +
           </button>
         </div>
