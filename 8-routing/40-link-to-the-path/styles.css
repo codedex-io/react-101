@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1 rem;
+  color: #333;
+  text-align: center;
+  padding: 2rem 3rem;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
