@@ -3,7 +3,7 @@
 
 import React from "react";
 import { useContext } from "react";
-import { ThemeContext } from "./App.jsx";
+import { ThemeContext } from "./App.js";
 
 export default function ThemeSwitcher() {
   const { theme, toggleTheme } = useContext(ThemeContext);
