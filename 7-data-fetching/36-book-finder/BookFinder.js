@@ -3,53 +3,114 @@
 
 import { useState, useEffect } from "react";
 
-export default function App() {
-  const [pokemonList, setPokemonList] = useState([]);
-  const [filteredPokemonList, setFilteredPokemonList] = useState([]);
+export default function BookFinderApp() {
+  const [query, setQuery] = useState("");
+  const [books, setBooks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  useEffect(function () {
-    async function fetchData() {
-      try {
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=25");
-        const data = await response.json();
-        
-        const pokemonDataList = [];
-        for (const pokemon of data.results) {
-          const pokemonResponse = await fetch(pokemon.url);
-          const pokemonData = await pokemonResponse.json();
-          pokemonDataList.push(pokemonData);
-        }
+  async function fetchData(filterValue = "") {
+    setError(null);
 
-        setPokemonList(pokemonDataList);
-        setFilteredPokemonList(pokemonDataList);
-      } catch (error) {
-        console.log("Error fetching data: ", error);
+    try {
+      let url = `https://www.googleapis.com/books/v1/volumes?q=${query}`;
+
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error("Network response was not ok.");
       }
-    }
+      const data = await response.json();
+      console.log(data.items);
+      let filteredBooks = data.items;
+      if (filterValue !== "") {
+        filteredBooks = filteredBooks.filter(function (book) {
+          return (
+            book.volumeInfo &&
+            book.volumeInfo.categories &&
+            book.volumeInfo.categories.includes(filterValue)
+          );
+        });
+      }
 
+      setBooks(filteredBooks);
+      setLoading(false);
+    } catch (error) {
+      setError("Error fetching data. Please try again later.");
+    }
+  }
+
+  useEffect(
+    function () {
+      if (query !== "") {
+        fetchData();
+      }
+    },
+    [loading],
+  );
+
+  function handleInputChange(event) {
+    setQuery(event.target.value);
+  }
+
+  function handleSearch(event) {
+    setLoading(true);
     fetchData();
-  }, []);
+  }
 
   function handleFilterChange(event) {
-    const searchTerm = event.target.value.toLowerCase();
-    const filtered = pokemonList.filter(function(pokemon) {
-      return pokemon.name.toLowerCase().startsWith(searchTerm);
-    });
-    setFilteredPokemonList(filtered);
+    setLoading(true);
+    fetchData(event.target.value);
   }
 
   return (
     <div>
-      <h1>Pokemon List</h1>
-      <div>
-        <input type="text" placeholder="Search Pokemon..." onChange={handleFilterChange} />
+      <h1>Book Finder</h1>
+      <div id="input-fields">
+        <input
+          type="text"
+          value={query}
+          onChange={handleInputChange}
+          placeholder="Search for books..."
+        />
+        <button type="submit" onClick={handleSearch}>
+          Search
+        </button>
+        <br />
+        <label htmlFor="filter">Filter by:</label>
+        <select id="filter" onChange={handleFilterChange}>
+          <option value="">All</option>
+          <option value="Paid ebooks">Paid E-books</option>
+          <option value="free-ebooks">Free E-books</option>
+        </select>
       </div>
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
       <ul>
-        {filteredPokemonList.map(function(pokemon, index) {
+        {books.map(function (book) {
           return (
-            <li key={index} className="pokemon">
-              <p>{pokemon.id}. {pokemon.name[0].toUpperCase() + pokemon.name.slice(1)}</p>
-              <img src={pokemon.sprites.front_default} alt={pokemon.name} />
+            <li key={book.id} className="book">
+              {book.volumeInfo.imageLinks &&
+                book.volumeInfo.imageLinks.thumbnail && (
+                  <img
+                    src={book.volumeInfo.imageLinks.thumbnail}
+                    alt={book.volumeInfo.title}
+                    className="book-cover"
+                  />
+                )}
+              <div className="book-info">
+                <h2>{book.volumeInfo.title}</h2>
+                <p>
+                  {book.volumeInfo.authors
+                    ? book.volumeInfo.authors.join(", ")
+                    : "Unknown Author"}
+                </p>
+
+                <p>
+                  {book.volumeInfo.description
+                    ? `${book.volumeInfo.description.substring(0, 100)}...`
+                    : "No description available"}
+                </p>
+              </div>
             </li>
           );
         })}
@@ -57,3 +118,4 @@ export default function App() {
     </div>
   );
 }
+
