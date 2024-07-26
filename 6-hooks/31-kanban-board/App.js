@@ -15,6 +15,22 @@ const TaskBoardProvider = function() {
     { id: 3, title: "Task 3", status: "todo" },
   ]);
 
+ // Kanban Board 📋
+// Codédex
+
+import React, { createContext, useContext, useState, useEffect } from "react";
+import Column from "./Column";
+import "./styles.css";
+
+export const BoardContext = createContext();
+
+const TaskBoardProvider = function() {
+  const [tasks, setTasks] = useState([
+    { id: 1, title: "Task 1", status: "todo" },
+    { id: 2, title: "Task 2", status: "todo" },
+    { id: 3, title: "Task 3", status: "todo" },
+  ]);
+
   const moveTask = function(taskId, newStatus) {
     const updatedTasks = tasks.map(function(task) {
       if (task.id === taskId) {
@@ -45,13 +61,13 @@ const Board = function() {
   return (
     <div className="board">
       <Column title="To Do 🪄" tasks={tasks.filter(function(task) {
-        return task.status === "todo"
+        return task.status === "todo";
       })} />
       <Column title="In Progress 🚀" tasks={tasks.filter(function(task) {
-        return task.status === "inProgress"
+        return task.status === "inProgress";
       })} />
       <Column title="Done 🌟" tasks={tasks.filter(function(task) {
-        return task.status === "done"
+        return task.status === "done";
       })} />
     </div>
   );
