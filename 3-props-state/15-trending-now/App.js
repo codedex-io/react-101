@@ -2,7 +2,7 @@
 // Codédex
 
 import { useState } from "react";
-import TrendingList from "./TrendingList";
+import TrendingList from "./TrendingList.js";
 
 export default function App() {
   const movieArray = [
