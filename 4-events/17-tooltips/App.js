@@ -3,11 +3,11 @@
 
 import { useState } from "react";
 
-export function App() {
+export default function App() {
  // State to track tooltip visibility
  const [showTooltip, setShowTooltip] = useState(false);
 
- function handleMouseEnter() {
+ function handleMouseOver() {
   setShowTooltip(true);
  }
 
@@ -19,7 +19,7 @@ export function App() {
    <div className="App">
      <div
        className="element-with-tooltip"
-       onMouseEnter={handleMouseEnter}
+       onMouseOver={handleMouseOver}
        onMouseLeave={handleMouseLeave}
      >
        Hover over me
