@@ -32,7 +32,7 @@ export default function TravelLog() {
     setInputData({
       destination: "",
       dates: "",
-      groupSize: "",
+      groupSize: 0,
       travelPreferences: ""
     })
   };
@@ -52,7 +52,7 @@ export default function TravelLog() {
         </select>
 
         <label htmlFor="dates">Dates:</label>
-        <input type="date" id="dates" name="date" value={inputData.dates} onChange={handleInputDataChange} />
+        <input type="date" id="dates" name="dates" value={inputData.dates} onChange={handleInputDataChange} />
 
         <label htmlFor="group-size">Group Size:</label>
         <input type="number" name="groupSize" id="group-size" value={inputData.groupSize} onChange={handleInputDataChange} />
