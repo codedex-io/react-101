@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/1992" exact element={<LinkPast />} />
         <Route path="/2006" exact element={<TwilightPrincess />} />
         <Route path="/2013" exact element={<LinkWorlds />} />
-        <Route path="/2016" exact element={<BoTW />} />
+        <Route path="/2017" exact element={<BoTW />} />
       </Routes>
     </div>
   );
