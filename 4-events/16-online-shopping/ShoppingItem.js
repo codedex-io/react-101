@@ -7,12 +7,12 @@ export default function ShoppingItem(props) {
   const [quantity, setQuantity] = useState(0);
 
   function handleIncrease() {
-    setQuantity(function(prevQuantity) { return prevQuantity + 1});
+    setQuantity(quantity + 1);
   }
 
   function handleDecrease() {
     if (quantity > 0) {
-      setQuantity(function(prevQuantity) { return prevQuantity - 1});
+      setQuantity(quantity - 1);
     }
   }
 
