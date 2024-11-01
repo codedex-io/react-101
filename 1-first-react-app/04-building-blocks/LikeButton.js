@@ -14,7 +14,7 @@ export default function LikeButton() {
       <div className="like-button" onClick={() => setLikes(likes + 1)}>
         {likes > 0 ? <img src={fullHeartImage} alt="Heart for like button" /> : <img src={emptyHeartImage} alt="Empty heart for like button" />}
       </div>
-      <p>{likes == 1 ? `  ${likes} Like` : `${likes} Likes`}</p>
+      <p>{likes === 1 ? `  ${likes} Like` : `${likes} Likes`}</p>
     </div>
   );
 }
