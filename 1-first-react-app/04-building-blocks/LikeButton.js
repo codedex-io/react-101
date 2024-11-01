@@ -3,8 +3,8 @@
 
 import { useState } from "react";
 
-const emptyHeartImage = "https://imgur.com/a/iNlNaPE";
-const fullHeartImage = "https://imgur.com/a/k6CdQmc";
+const emptyHeartImage = "https://i.imgur.com/wIq3Wbq.png";
+const fullHeartImage = "https://i.imgur.com/vyX9Vnx.png";
 
 export default function LikeButton() {
   const [likes, setLikes] = useState(0);
