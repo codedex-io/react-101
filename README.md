@@ -68,7 +68,7 @@ Welcome to Framework Valley: React GitHub repo! We are super excited to have you
 ## Routing
 
 - [`know-your-routes`](https://github.com/codedex-io/react-101/blob/main/8-routing/37-know-your-routes)
-- [`bowser`](https://github.com/codedex-io/react-101/blob/main/8-routing/38-browser)
+- [`bowser`](https://github.com/codedex-io/react-101/blob/main/8-routing/38-bowser)
 - [`paper-route-trail`](https://github.com/codedex-io/react-101/blob/main/8-routing/39-paper-route-trail)
 - [`link-to-the-path`](https://github.com/codedex-io/react-101/blob/main/8-routing/40-link-to-the-path)
 - [`ponoplayer`](https://github.com/codedex-io/react-101/blob/main/8-routing/41-ponoplayer)
