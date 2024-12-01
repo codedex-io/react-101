@@ -2,10 +2,10 @@
 // Codédex
 
 import React from "react";
-import { BoardContext } from "./App.jsx";
 import { useContext } from "react";
+import { BoardContext } from "./App.js";
 
-export default function Task ({ task }) {
+export default function Task({ task }) {
   const { moveTask } = useContext(BoardContext);
 
   const handleStatusChange = (e) => {
