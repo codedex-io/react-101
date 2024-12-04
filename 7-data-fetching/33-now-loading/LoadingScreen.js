@@ -1,5 +1,5 @@
 // Now Loading ⏳
-// Codédedx
+// Codédex
 
 import React, { useState, useEffect } from "react";
 import "./styles.css";
