@@ -11,7 +11,7 @@ export default function App() {
     {
       name: "Fatima",
       category: "Doctor",
-      website: "fatimahealh.com"
+      website: "fatimahealth.com"
     },
     {
       name: "Juan",
