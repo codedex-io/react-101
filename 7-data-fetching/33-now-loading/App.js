@@ -1,5 +1,5 @@
 // Now Loading ⏳
-// Codédedx
+// Codédex
 
 import LoadingScreen from "./LoadingScreen";
 
