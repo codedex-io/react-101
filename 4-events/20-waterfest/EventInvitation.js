@@ -2,7 +2,6 @@
 // Codédex
 
 import React, { useState } from "react";
-import "./index.css";
 
 export default function EventInvitation() {
   const [interestedCount, setInterestedCount] = useState(0);
@@ -77,7 +76,7 @@ export default function EventInvitation() {
   return (
     <div className="container">
       <div className="hero-image">
-        <img src="src/waterfest.jpg" alt="Event" />
+        <img src="https://i.imgur.com/LAi9iHS.jpeg" alt="Event" />
       </div>
       <div className="description">
         <h2>You're invited to WaterFest! 🏝️</h2>

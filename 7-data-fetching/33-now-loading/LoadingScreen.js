@@ -2,7 +2,6 @@
 // Codédex
 
 import React, { useState, useEffect } from "react";
-import "./styles.css";
 
 export default function LoadingScreen() {
   const [loadingMessage, setLoadingMessage] = useState("");
